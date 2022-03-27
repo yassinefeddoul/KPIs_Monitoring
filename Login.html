@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDS Home</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <nav class="nav-bar">
+        <div class="">
+          <div class=""></div>
+        </div>
+        <div class="app-title right-sided">
+          FEAM <span class="">Digital Solutions</span>
+        </div>
+      </nav>
+      <!-- main body -->
+      <div class="body">
+        <div class="bg-img"></div>
+        <div class="blacked signin">
+          <div class="notif notifSignin">
+            <div class="notif--icon"></div>
+            <div class="notif--content" id="notifContSignin"></div>
+          </div>
+          <div class="registering-container old-user">
+            <h2 class="title-register">Welcome Home !!</h2>
+            <div class="underline"></div>
+            <div class="form-container">
+              <div class="use-email">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder=""
+                  autofocus
+                />
+              </div>
+              <div class="password">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password" />
+              </div>
+              <div class="btn-container">
+                <button class="btn btn--connect" id="btnConnect">
+                  Connect
+                </button>
+                <button class="btn btn--reset" id="btnReset">
+                  Reset Password
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blacked signup">
+          <div class="notif notifSignup">
+            <div class="notif--icon"></div>
+            <div class="notif--content" id="notifContSignup"></div>
+          </div>
+          <div class="registering-container new-user">
+            <h2 class="title-register">Create your password</h2>
+            <div class="underline"></div>
+            <div class="form-container">
+              <div class="use-email">
+                <label for="new-email">Email</label>
+                <input
+                  type="text"
+                  id="new-email"
+                  placeholder=""
+                  disabled
+                />
+              </div>
+              <div class="password">
+                <label for="pass">Password</label>
+                <input
+                  type="password"
+                  id="new-pass"
+                  name="password"
+                  autofocus
+                />
+              </div>
+              <div class="password">
+                <label for="pass-conf">Confirm Password</label>
+                <input type="password" id="pass-conf" name="password" />
+              </div>
+              <div class="btn-container">
+                <button class="btn btn--connect" type="submit" id="btnCreate">
+                  Create
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blacked apps">
+          <div class="notif notifApp">
+            <div class="notif--icon"></div>
+            <div class="notif--content" id="notifContApp"></div>
+          </div>
+          <div class="applications-container">
+            <h2 class="title-register">Choose an APP</h2>
+            <div class="underline"></div>
+            <div class="dev">
+              <div class="dev--application" id="F2FI">FACE TO FACE</div>
+              <!-- <div class="dev--application" id="e-Top5">e-Top5</div>
+              <div class="dev--application" id="e-DLE">e-DLE</div> -->
+            </div>
+          </div>
+        </div>
+        <p class="signature">Developped by: AYADI & FEDDOUL</p>
+      </div>
+    </div>
+    <div class="blacked trans">
+      <div class="faurTrans"></div>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>

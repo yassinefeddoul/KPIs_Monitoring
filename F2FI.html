@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FACE TO FACE</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> -->
+    <link rel="stylesheet" href="Animate.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="blacked trans trans--new-window">
+      <div class="faurTrans EntryTrans"></div>
+    </div>
+    <div class="page-container">
+      <div class="nav-bar">
+        <div class="app-title ">
+          F2FI<span class="pink-faurecia small"> v2.0</span>
+        </div>
+        <div class="app-title" id="userFullName"></div>
+        <div class="app-title ">
+          FEAM <span class="pink-faurecia">Digital Solutions</span>
+        </div>
+      </div>
+      <div class="body">
+        <div class="bg-img bg--inF2F"></div>
+        <div class="blacked F2F-workflow">
+          <div class="notif notifF2FI">
+            <div class="notif--icon notif--success" id="notif--icon"></div>
+            <div class="notif--content" id="notifContF2FI"></div>
+          </div>
+          <div class="F2FI-taskbar">
+            <div class="start-icon" id="btnStart-icon"></div>
+          </div>
+          <div class="F2FI-content">
+            <!-- <div class="interface-icon">
+              <div class="F2F-icon" id="F2F-icon"></div>
+            </div> -->
+            <div class="blackedIn Face2Face-content" id="Face2Face-content">
+              <div class="content-container content-container-FacetoFace">
+                <div class="closeBtn" id="F2F-close">+</div>
+                <div class="container-caption">FACE TO FACE BOARD</div>
+                <div class="KPIF2F-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <td colspan="3" style="border-radius: 20px 0 0 0">
+                        &nbsp;
+                      </td>
+                      <td colspan="2" style="font-weight: bold">STD</td>
+                      <td colspan="2" style="font-weight: bold">RR Last 24h</td>
+                      <td colspan="1" style="border-radius: 0 20px 0 0">
+                        &nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>IDKPI</th>
+                      <th>Input</th>
+                      <th>Criteria</th>
+                      <th>N-1 View</th>
+                      <th>N View</th>
+                      <th>N-1 View</th>
+                      <th>N View</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                    <tbody class="F2F-data" id="F2F-data">
+                      <!-- <tr>
+                        <td>IDKPI</td>
+                        <td>KPINAME</td>
+                        <td>KPICriteria</td>
+                        <td>STDN1</td>
+                        <td>STDN</td>
+                        <td>
+                          <input type="checkbox" class="RRLast24h" />
+                        </td>
+                        <td><input type="checkbox" class="RRLast24h" /></td>
+                        <td>Plan d'action</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                </div>
+                <div class="btn btn--inF2F btn--pinkFaurecia" id="F2FSaveBtn">
+                  Save Changes
+                </div>
+              </div>
+              <!-- <div class="blackedIn dashboard-content">
+                djakdjaizdjaslmjdiak
+              </div> -->
+            </div>
+            <div class="blackedIn dashBoard-content" id="dashBoard-content">
+              <div class="content-container content-container--DB">
+                <div class="closeBtn" id="btnCloseDB">+</div>
+                <div class="container-caption">DASH BOARD</div>
+                <div class="dashboard-graphs">
+                  <div class="DB db--graph1" id="db--graph1"></div>
+                  <div class="DB db--graph2" id="db--graph2"></div>
+                  <div class="DB db--graph3" id="db--graph3"></div>
+                  <div class="DB db--graph4" id="db--graph4"></div>
+                </div>
+              </div>
+            </div>
+            <div class="blackedIn alertBoard-content" id="alertBoard-content">
+              <div
+                class="content-container content-container--AB"
+                id="content-container--AB"
+              >
+                <div class="closeBtn" id="btnCloseAB">+</div>
+                <div class="container-caption">ALERT BOARD</div>
+                <div class="flexrow-space-between">
+                  <div class="alert-sheet-container">
+                    <div class="alert-sheet">
+                      <div class="alert-sheet-header full-underline">
+                        <div
+                          class="container-caption container-caption--black"
+                          id="container-caption--alert-sheet"
+                        >
+                          ALERT: Input ______
+                        </div>
+                      </div>
+                      <div class="alert-sheet-body">
+                        <div
+                          class="
+                            alert-sheet-lvls alert-sheet-lvls--1
+                            full-underline
+                          "
+                        >
+                          <div
+                            class="alert-sheet-action alert-sheet-action--1"
+                            id="alert-sheet-action--1"
+                          >
+                            <span class="light-bold">Action Decided:</span>
+                          </div>
+                          <div class="alert-sheet-timings">
+                            <div
+                              id="alert-sheet-expectedTime--1"
+                              class="
+                                alert-sheet-expectedTime
+                                alert-sheet-expectedTime--1
+                              "
+                            >
+                              <span class="light-bold">Expected Time:</span>
+                              --H--min
+                            </div>
+                            <div
+                              class="alert-sheet-date alert-sheet-date--1"
+                              id="alert-sheet-date--1"
+                            >
+                              <span class="light-bold">Date:</span> yyyy/mm/dd
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="
+                            alert-sheet-lvls alert-sheet-lvls--2
+                            full-underline
+                          "
+                        >
+                          <div
+                            class="alert-sheet-action alert-sheet-action--2"
+                            id="alert-sheet-action--2"
+                          >
+                            <span class="light-bold">Action Decided:</span>
+                          </div>
+                          <div class="alert-sheet-timings">
+                            <div
+                              id="alert-sheet-expectedTime--2"
+                              class="
+                                alert-sheet-expectedTime
+                                alert-sheet-expectedTime--2
+                              "
+                            >
+                              <span class="light-bold">Expected Time:</span>
+                              --H--min
+                            </div>
+                            <div
+                              class="alert-sheet-date alert-sheet-date--2"
+                              id="alert-sheet-date--2"
+                            >
+                              <span class="light-bold">Date:</span> yyyy/mm/dd
+                            </div>
+                          </div>
+                        </div>
+                        <div class="alert-sheet-lvls alert-sheet-lvls--3">
+                          <div
+                            class="alert-sheet-action alert-sheet-action--3"
+                            id="alert-sheet-action--3"
+                          >
+                            <span class="light-bold">Action Decided:</span>
+                          </div>
+                          <div class="alert-sheet-timings">
+                            <div
+                              id="alert-sheet-expectedTime--3"
+                              class="
+                                alert-sheet-expectedTime
+                                alert-sheet-expectedTime--3
+                              "
+                            >
+                              <span class="light-bold">Expected Time:</span>
+                              --H--min
+                            </div>
+                            <div
+                              class="alert-sheet-date alert-sheet-date--3"
+                              id="alert-sheet-date--3"
+                            >
+                              <span class="light-bold">Date:</span> yyyy/mm/dd
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert-params">
+                    <div class="alert-params--KPI">
+                      <div
+                        class="
+                          container-caption container-caption--black
+                          underline underline--black
+                        "
+                      >
+                        KPIs in Alert
+                      </div>
+                      <div class="alertKPI-list">
+                        <table class="KPIlist">
+                          <tbody class="KPIlist-Alerted" id="KPIlist-Alerted">
+                            <!-- <tr>
+                              <td>Nombre de défauts détectés au MQ DAV P24</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 2</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 3</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 4</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 5</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 6</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 2</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 2</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 2</td>
+                            </tr>
+                            <tr>
+                              <td>KPI Name 2</td>
+                            </tr> -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="alert-params--action">
+                      <div class="container-caption" style="color: black">
+                        Take your action
+                      </div>
+                      <textarea
+                        id="action-field"
+                        class="action-field"
+                        name="paragraph_text"
+                        cols="50"
+                        rows="10"
+                        disabled
+                      ></textarea>
+                      <div
+                        class="btn btn--success btn--sidemargin"
+                        id="btnTakeAction"
+                        style="align-self: end; box-shadow: none"
+                      >
+                        <img
+                          src="SuccessBlack.png"
+                          style="height: 5rem"
+                        />
+                      </div>
+                    </div>
+                    <div class="alert-params--conf" id="alert-params--conf">
+                      <!-- <div class="alertKPIs"></div> -->
+                      <div
+                        class="btn btn--pinkFaurecia btn--sidemargin"
+                        id="btnDirectorValidate"
+                      >
+                        VALIDATE
+                      </div>
+                      <div
+                        class="btn btn--green btn--sidemargin"
+                        id="btnOnWait"
+                      >
+                        DONE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blackedIn settings-content" id="settings-content">
+              <div
+                class="
+                  content-container
+                  content-container--SETTINGS
+                  content-container--SETTINGSprincipale FEAMshow
+                "
+                id="content-container--SETTINGSprincipale"
+              >
+                <div class="closeBtn" id="setting-close">+</div>
+
+                <div class="container-caption underline">
+                  FEAM Management Control
+                </div>
+                <div class="KPItoFollow block-carac">
+                  <div class="blockTitle">KPI to Follow</div>
+                  <div class="dropdown dropdown--UAP">
+                    <label class="dropHeader dropHeader--UAP">UAP</label>
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemUAP"
+                      ></div>
+                      <div class="dropBtn arrow-img" id="dropBtnUAP"></div>
+                    </div>
+                    <div class="dropContent" id="dropContentUAP">
+                      <div class="elm">elm1</div>
+                      <div class="elm">elm2</div>
+                      <div class="elm">elm3</div>
+                      <div class="elm">elm4</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Project"
+                      >Project</label
+                    >
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemProject"
+                      ></div>
+                      <div class="dropBtn arrow-img" id="dropBtnProject"></div>
+                    </div>
+                    <div class="dropContent" id="dropContentProject">
+                      <div class="elm">elm1</div>
+                      <div class="elm">elm2</div>
+                      <div class="elm">elm3</div>
+                      <div class="elm">elm4</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Indicator"
+                      >Indicator</label
+                    >
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemIndicator"
+                      ></div>
+                      <div
+                        class="dropBtn arrow-img"
+                        id="dropBtnIndicator"
+                      ></div>
+                    </div>
+                    <div class="dropContent" id="dropContentIndicator">
+                      <div class="elm">elm1</div>
+                      <div class="elm">elm2</div>
+                      <div class="elm">elm3</div>
+                      <div class="elm">elm4</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="following block-carac"
+                  style="width: 90%; min-height: 20%; padding: 1rem"
+                >
+                  <div class="blockTitle">Following</div>
+                  <div class="realtimeKPI-container">
+                    <table class="realtimeKPI-content" id="realtimeKPI-content">
+                      <tbody>
+                        <tr><td>KPI Name 2</td></tr>
+                        <tr>
+                          <td>KPI Name 3</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 4</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 5</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 6</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 7</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 2</td>
+                        </tr>
+                        <tr>
+                          <td>KPI Name 2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="btn btnSubmitRealtimeKPI" id="btnSubmitRealtimeKPI">SUBMIT</div>
+                </div>
+                <div class="btnFooter-container block-carac">
+                  <div class="btn btnNewEmploye" id="btnNewEmploye">NEW EMPLOYE ?</div>
+                  <div class="btn btnNewProject" id="btnNewProject">NEW PROJECTS ?</div>
+                  <div class="btn btnNewIndicator" id="btnNewIndicator">NEW INDICATOR ?</div>
+                </div>
+              </div>
+              <div
+                class="
+                  content-container
+                  content-container--SETTINGS
+                  content-container--SETTINGSsecond
+                "
+                id="content-container--SETTINGSsecond"
+              >
+                <div class="returnBtn returnBtn--second" id="returnBtn--second"></div>
+                <div class="container-caption underline">
+                  FEAM Management Control
+                </div>
+                <div class="newEmploye block-carac">
+                  <div class="blockTitle">New Employe</div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Indicator"
+                      >NEW EMAIL</label
+                    >
+                    <div class="dropChosen">
+                      <input
+                        type="email"
+                        id="newEmploye-email"
+                        placeholder="example@faurecia.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Indicator"
+                      >USER NAME</label
+                    >
+                    <div class="dropChosen">
+                      <input
+                        type="text"
+                        id="newEmploye-username"
+                        placeholder="OURHIL Said"
+                      />
+                      <!-- <div class="dropBtn arrow-img" id="dropBtnIndicator"></div> -->
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Status">STATUS</label>
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemStatus"
+                      ></div>
+                      <div class="dropBtn arrow-img" id="dropBtnStatus"></div>
+                    </div>
+                    <div class="dropContent" id="dropContentStatus">
+                      <div class="elm">Director</div>
+                      <div class="elm">Deputy Manager</div>
+                      <div class="elm">Manager</div>
+                      <div class="elm">Superviseur</div>
+                      <div class="elm">FES</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--UAPemp">UAP</label>
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemUAPemp"
+                      ></div>
+                      <div class="dropBtn arrow-img" id="dropBtnUAPemp"></div>
+                    </div>
+                    <div class="dropContent" id="dropContentUAPemp">
+                      <div class="elm">UAP1</div>
+                      <div class="elm">UAP2</div>
+                      <div class="elm">UAP3</div>
+                      <div class="elm">UAP4</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <label class="dropHeader dropHeader--Departement"
+                      >Departement</label
+                    >
+                    <div class="dropChosen">
+                      <div
+                        class="dropSelectedItem"
+                        id="dropSelectedItemDepartement"
+                      ></div>
+                      <div
+                        class="dropBtn arrow-img"
+                        id="dropBtnDepartement"
+                      ></div>
+                    </div>
+                    <div class="dropContent" id="dropContentDepartement">
+                      <div class="elm">Director</div>
+                      <div class="elm">Deputy Manager</div>
+                      <div class="elm">Manager</div>
+                      <div class="elm">Supervisor</div>
+                    </div>
+                  </div>
+                  <div class="emptyblock" style="width: 30%;"></div>
+                  <div
+                        class="btnSubmitNewEmploye successImg"
+                        id="btnSubmitNewEmploye"
+                      ></div>
+                </div>
+              </div>
+              <div
+                class="
+                  content-container
+                  content-container--SETTINGS
+                  content-container--SETTINGSthird
+                "
+                id="content-container--SETTINGSthird"
+              >
+                <div class="returnBtn returnBtn--third" id="returnBtn--third"></div>
+                <div class="container-caption underline">
+                  FEAM Management Control
+                </div>
+                <div class="newProject block-carac" style="height: 50rem">
+                  <div class="blockTitle">New Project</div>
+                  <div class="newProBlocks newProBlocks-fields">
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--newProject"
+                        >PROJECT NAME</label
+                      >
+                      <div class="dropChosen">
+                        <input type="text" id="newProject-name" />
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--proUAP">UAP</label>
+                      <div class="dropChosen">
+                        <div
+                          class="dropSelectedItem"
+                          id="dropSelectedItemproUAP"
+                        ></div>
+                        <div class="dropBtn arrow-img" id="dropBtnproUAP"></div>
+                      </div>
+                      <div class="dropContent" id="dropContentproUAP">
+                        <div class="elm">Director</div>
+                        <div class="elm">Deputy Manager</div>
+                        <div class="elm">Manager</div>
+                        <div class="elm">Superviseur</div>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--AddWC"
+                        >WORKCENTER ID</label
+                      >
+                      <div class="dropChosen">
+                        <input type="text" id="newProject-WCID" />
+                        <div
+                          class="dropBtn dropBtn--addImg"
+                          id="dropBtnAddWC"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="btnSubmitNewPro successImg" id="btnSubmitNewPro">SUBMIT PROJECT</div>
+                  </div>
+                  <div class="newProBlocks newProBlocks-supervisor">
+                    <label>SUPERVISORS LIST</label>
+                    <div class="supervisor-list-container">
+                      <table class="supervisor-list-content" id="supervisor-list-content">
+                        <tbody>
+                          <tr>
+                            <td>Supervisor 1</td>
+                          </tr>
+                          <tr>
+                            <td>Supervisor 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="newProBlocks newProBlocks-WCID">
+                    <label>WORKCENTER IDs</label>
+                    <div class="WCID-list-container">
+                      <table class="WCID-list-content" id="WCID-list-content">
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="
+                  content-container
+                  content-container--SETTINGS
+                  content-container--SETTINGSfourth
+                "
+                id="content-container--SETTINGSfourth"
+              >
+                <div class="returnBtn returnBtn--fourth" id="returnBtn--fourth"></div>
+                <div class="container-caption underline">
+                  FEAM Management Control
+                </div>
+                <div class="newIndicator block-carac">
+                  <div class="blockTitle">New Indicator</div>
+                  <div class="block1">
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--KPIname"
+                        >KPI NAME</label
+                      >
+                      <div class="dropChosen">
+                        <input type="text" id="newProject-KPIname" />
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--KPIcriteria"
+                        >CRITERIA</label
+                      >
+                      <div class="dropChosen">
+                        <input type="text" id="newProject-KPIcriteria" />
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--KPItype">KPI TYPE</label>
+                      <div class="dropChosen">
+                        <div
+                          class="dropSelectedItem"
+                          id="dropSelectedItemKPItype"
+                        ></div>
+                        <div class="dropBtn arrow-img" id="dropBtnKPItype"></div>
+                      </div>
+                      <div class="dropContent" id="dropContentKPItype">
+                        <div class="elm">Volume</div>
+                        <div class="elm">Rework</div>
+                        <div class="elm">Scrap</div>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--Target"
+                        >3H TARGET</label
+                      >
+                      <div class="dropChosen">
+                        <input type="number" id="newProject-Target" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block2">
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--KPIpro">PROJECT</label>
+                      <div class="dropChosen">
+                        <div
+                          class="dropSelectedItem"
+                          id="dropSelectedItemKPIpro"
+                        ></div>
+                        <div class="dropBtn arrow-img" id="dropBtnKPIpro"></div>
+                      </div>
+                      <div class="dropContent" id="dropContentKPIpro">
+                        <div class="elm">Director</div>
+                        <div class="elm">Deputy Manager</div>
+                        <div class="elm">Manager</div>
+                        <div class="elm">Supervisor</div>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--MaxExpected"
+                        >Max Expected (<span style="font-style: italic;">min</span>)</label
+                      >
+                      <div class="dropChosen">
+                        <input type="number" id="newProject-MaxExpected" />
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <label class="dropHeader dropHeader--critical"
+                        > </label
+                      >
+                      <div class="dropChosen" style="background-color:rgba(0, 0, 0, 0); border: none; box-shadow: 0 0 0 0">
+                        <input type="text" id="newProject-critical" style="width: 6%;" disabled/>
+                        <label for="newProject-critical"> </label>
+                      </div>
+                    </div>
+                    <div class="dropdown" style="justify-self: flex-end;">
+                      <label class="dropHeader dropHeader--critical"
+                        > </label
+                      >
+                      <div class="dropChosen" style="background-color: rgba(0, 0, 0, 0); border: none; box-shadow: 0 0 0 0; justify-content: flex-end; padding: 0; ">
+                        <div class="btn btnSubmitNewKPI" id="btnSubmitNewKPI">SUBMIT</div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="blackedIn tourSheet" id="tourSheet">
+            <div class="content-container content-container-TourSheet">
+              <div class="closeBtn" id="btnCloseTS">+</div>
+              <div class="container-caption">Tour Sheet</div>
+              <!-- <div class="dropdown">
+                <label class="dropHeader dropHeader--Week"
+                  >WEEK</label
+                >
+                <div class="dropChosen">
+                  <div
+                    class="dropSelectedItem"
+                    id="dropSelectedItemWeek"
+                  ></div>
+                  <div class="dropBtn arrow-img" id="dropBtnWeek"></div>
+                </div>
+                <div class="dropContent" id="dropContentWeek">
+                  <div class="elm">WEEK 1</div>
+                  <div class="elm">WEEK 2</div>
+                  <div class="elm">WEEK 3</div>
+                  <div class="elm">WEEK 4</div>
+                </div>
+              </div> -->
+              <table>
+                <thead>
+                  <tr>
+                    <td colspan="7">PLANT TOUR AUDIT</td>
+                  </tr>
+                  <tr>
+                    <th>UAP</th>
+                    <th>IDKPI</th>
+                    <th>KPI</th>
+                    <th>Criteria</th>
+                    <th>STD</th>
+                    <th>RR</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody class="tourSheetBody" id="tourSheetBody">
+                  
+                </tbody>
+              </table>
+              <div class="tourSheetControl">
+                <div class="dropdown" style="margin-bottom: 0; padding-bottom: 0;">
+                  <label class="dropHeader dropHeader--SheetDates">Dates</label>
+                  <div class="dropChosen" style="margin-bottom: 0;">
+                    <div
+                      class="dropSelectedItem"
+                      id="dropSelectedItemSheetDates"
+                      ></div>
+                      <div class="dropBtn arrow-img" id="dropBtnSheetDates"></div>
+                    </div>
+                    <div class="dropContent" id="dropContentSheetDates">
+                      <div class="elm">Director</div>
+                      <div class="elm">Deputy Manager</div>
+                      <div class="elm">Manager</div>
+                      <div class="elm">Supervisor</div>
+                    </div>
+                </div>
+                <div class="btn btn--inF2F btn--pinkFaurecia" id="btnSaveTourSheet">
+                  Save Changes
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="blacked F2FI-nav" id="F2FI-nav">
+          <div class="nav-elm" id="nav-elm">
+            <div class="nav-content" id="Face2Face-nav">
+              <div class="nav-icon">
+                <div class="F2F-icon"></div>
+              </div>
+              <div class="nav-title">Face to Face Board</div>
+            </div>
+            <div class="nav-content" id="AB-nav">
+              <div class="nav-icon">
+                <div class="AB-icon"></div>
+              </div>
+              <div class="nav-title">AlertBoard</div>
+            </div>
+            <div class="nav-content" id="DB-nav">
+              <div class="nav-icon">
+                <div class="DB-icon"></div>
+              </div>
+              <div class="nav-title">DashBoard</div>
+            </div>
+            <div class="nav-content" id="TS-nav">
+              <div class="nav-icon">
+                <div class="TS-icon"></div>
+              </div>
+              <div class="nav-title">TourSheet</div>
+            </div>
+            <div class="nav-content" id="PARAM-nav">
+              <div class="nav-icon">
+                <div class="PARAM-icon"></div>
+              </div>
+              <div class="nav-title">Settings</div>
+            </div>
+            <div class="nav-content" id="Q-nav">
+              <div class="nav-icon">
+                <div class="Q-icon"></div>
+              </div>
+              <div class="nav-title">Quit</div>
+            </div>
+          </div>
+        </div>
+        <!-- <p class="signature">Developped by: AYADI & FEDDOUL</p> -->
+      </div>
+    </div>
+  </div>
+  
+  </body>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+  <script src="F2FI.js"></script>
+</html>
